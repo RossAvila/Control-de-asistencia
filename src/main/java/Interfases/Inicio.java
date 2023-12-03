@@ -29,6 +29,7 @@ public class Inicio extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        Inicio = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -41,32 +42,45 @@ public class Inicio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 204, 204));
+
+        Inicio.setBackground(new java.awt.Color(242, 239, 239));
+        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Registro de Asistencia");
+        Inicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 13, 196, -1));
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Registro de asistencia virtual de la CENTRAL DE INFORMACIÓN Y ORIENTACCIÓN DE SALUD 113");
+        Inicio.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(204, 0, 51));
         jLabel3.setText("Registrar nueva marcación");
+        Inicio.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 192, 21));
 
         jLabel4.setText("Hora actual (en curso)");
+        Inicio.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("9/12/2023");
+        Inicio.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("MS Gothic", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 0, 255));
         jLabel6.setText("07:55:24");
+        Inicio.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Este registro quedará asociado al reloj virtual.");
+        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 268, 20));
 
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("Para registrar la asistencia presione el botón correspodiente al tipo de marcación que desee realizar.");
+        Inicio.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, 20));
 
         jButton1.setText("REGISTRAR ENTRADA");
+        Inicio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
 
         jButton2.setText("REGISTRAR SALIDA");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -74,67 +88,17 @@ public class Inicio extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        Inicio.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(252, 252, 252)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jButton1)
-                        .addGap(122, 122, 122)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(265, 265, 265)
-                        .addComponent(jLabel4)))
-                .addContainerGap(52, Short.MAX_VALUE))
+            .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(27, Short.MAX_VALUE))
+            .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
         );
 
         pack();
@@ -180,6 +144,7 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Inicio;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
