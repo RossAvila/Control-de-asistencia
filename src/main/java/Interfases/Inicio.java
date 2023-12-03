@@ -4,6 +4,12 @@
  */
 package Interfases;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
+
 /**
  *
  * @author HP
@@ -15,7 +21,23 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        
+        actualizarHora();
     }
+    
+    public void actualizarHora(){
+         Timer timer = new Timer(1000, new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+              // Obtiene la hora actual
+              SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+              String time = dateFormat.format(new Date());
+             JLTiempo.setText(time);
+          }
+       });
+        
+       timer.start();
+    
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,12 +51,13 @@ public class Inicio extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        Inicio = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        JLTiempo = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -44,34 +67,59 @@ public class Inicio extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 204, 204));
+
+        Inicio.setBackground(new java.awt.Color(242, 239, 239));
+        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Registro de Asistencia");
+        Inicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 13, 196, -1));
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Registro de asistencia virtual de la CENTRAL DE INFORMACIÓN Y ORIENTACCIÓN DE SALUD 113");
+        Inicio.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(204, 0, 51));
+<<<<<<< HEAD
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel3.setText("Registrar nueva marcación:");
+=======
+        jLabel3.setText("Registrar nueva marcación");
+        Inicio.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 192, 21));
+>>>>>>> 37b929833e5a6ca02b33e7387576652ecbef9d43
 
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel4.setText("Hora actual (en curso)");
+        Inicio.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+<<<<<<< HEAD
         jLabel5.setText("09/12/2023");
+=======
+        jLabel5.setText("9/12/2023");
+        Inicio.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+>>>>>>> 37b929833e5a6ca02b33e7387576652ecbef9d43
 
-        jLabel6.setFont(new java.awt.Font("MS Gothic", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel6.setText("07:55:24");
+        JLTiempo.setFont(new java.awt.Font("MS Gothic", 1, 36)); // NOI18N
+        JLTiempo.setForeground(new java.awt.Color(51, 0, 255));
+        JLTiempo.setText("07:55:24");
+        Inicio.add(JLTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Este registro quedará asociado al reloj virtual.");
+        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 268, 20));
 
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("Para registrar la asistencia presione el botón correspodiente al tipo de marcación que desee realizar.");
+        Inicio.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, 20));
 
+<<<<<<< HEAD
         jButton1.setText("REGISTRAR");
+=======
+        jButton1.setText("REGISTRAR ENTRADA");
+        Inicio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
+>>>>>>> 37b929833e5a6ca02b33e7387576652ecbef9d43
 
         jButton2.setText("CANCELAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +127,7 @@ public class Inicio extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        Inicio.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         jRadioButton1.setText("Hora de Entrada");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +149,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -173,6 +223,13 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addContainerGap(27, Short.MAX_VALUE))
+=======
+            .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+>>>>>>> 37b929833e5a6ca02b33e7387576652ecbef9d43
         );
 
         pack();
@@ -226,6 +283,8 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Inicio;
+    private javax.swing.JLabel JLTiempo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -236,7 +295,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
