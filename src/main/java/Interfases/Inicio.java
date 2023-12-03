@@ -4,6 +4,12 @@
  */
 package Interfases;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
+
 /**
  *
  * @author HP
@@ -15,7 +21,23 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        
+        actualizarHora();
     }
+    
+    public void actualizarHora(){
+         Timer timer = new Timer(1000, new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+              // Obtiene la hora actual
+              SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+              String time = dateFormat.format(new Date());
+             JLTiempo.setText(time);
+          }
+       });
+        
+       timer.start();
+    
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,7 +57,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        JLTiempo = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -66,10 +88,10 @@ public class Inicio extends javax.swing.JFrame {
         jLabel5.setText("9/12/2023");
         Inicio.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("MS Gothic", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel6.setText("07:55:24");
-        Inicio.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        JLTiempo.setFont(new java.awt.Font("MS Gothic", 1, 36)); // NOI18N
+        JLTiempo.setForeground(new java.awt.Color(51, 0, 255));
+        JLTiempo.setText("07:55:24");
+        Inicio.add(JLTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Este registro quedará asociado al reloj virtual.");
@@ -145,6 +167,7 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Inicio;
+    private javax.swing.JLabel JLTiempo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -155,7 +178,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
